@@ -1,0 +1,26 @@
+/*Javier Carrasco Arango : UO294532*/
+/*Especificidad (0,0,1)*/
+header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+/*Especificidad (0,0,1)*/
+nav{
+    display: flex;
+    flex-grow: 2;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+/*Especificidad (0,0,2)*/
+nav a{
+    flex:5;
+    text-align: center;
+}
+
+@media screen and (max-width: 465px){
+    /*Especificidad (0,0,2)*/
+    header + p{
+        display:none;
+    }
+}

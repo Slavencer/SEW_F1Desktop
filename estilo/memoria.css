@@ -1,0 +1,51 @@
+/*Javier Carrasco Arango : UO294532*/
+/*Especificidad (0,0,2)*/
+section > h3{
+    width: 100%;
+    /*Color de texto viene heredado del body de estilo.css, el contraste cumple el estándar*/
+    background-color: #FFEEAD;
+    padding: 1% 2%;
+}
+/*Especificidad (0,0,1)*/
+article{
+    padding: 14.5% 11%;
+    margin:0.2em;
+    border: 0.1cap solid #176baf;
+    border-radius: 0.6cap;
+    cursor: pointer;
+    transform: scale(1);
+    transition: transform .5s;
+    /*Color de texto viene heredado del body de estilo.css, el contraste cumple el estándar*/
+    background-color: #FFEEAD;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform-style: preserve-3d;
+}
+/*Especificidad (0,0,2)*/
+article h3,article img{
+    transform-style: preserve-3d;
+    position:absolute;
+    text-align: center;
+    margin: 0%;
+    backface-visibility: hidden;
+    border-radius: 1em;
+    width: 100%;
+    font-size: 1em;
+}
+/*Especificidad (0,1,1)*/
+article[data-state=flip] {
+    transform: rotateY(180deg);
+    /*No hay color de texto puesto por que en este estado solo hay una imagen mostrada en el article*/
+    background-color: #FFFFFF;
+}
+/*Especificidad (0,0,2)*/
+article img{
+    transform: rotateY(180deg);
+}
+/*Especificidad (0,0,2)*/
+section button{
+    width:100%;
+    height:3em;
+}

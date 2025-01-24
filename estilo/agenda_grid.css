@@ -1,0 +1,27 @@
+/*Especificidad (0,0,1)*/
+h2,img{
+    width:100%;
+}
+/*Especificidad(0,0,1)*/
+main{
+    width:100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+/*Especificidad(0,0,2)*/
+main article{
+    width:17%;
+    margin: 0.5%;
+    border: 0.5cap solid #8e3900;
+    border-radius: 10%;
+    /*Color de texto está heredado de body en estilo.css, el contraste cumple el estándar*/
+    background-color: #FFEEAD;
+    text-align: center;
+}
+@media screen and (max-width: 810px){
+    /*Especificidad (0,0,2)*/
+    main article{
+        /*Redefinición causada por media query*/
+        width: 45%;
+    }
+}

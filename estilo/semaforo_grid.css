@@ -1,0 +1,103 @@
+/*Javier Carrasco Arango : UO294532*/
+/*Especificidad (0,0,1)*/
+main{
+    display: grid;
+    grid-template-columns: repeat(4, 22.5%);
+    grid-template-rows: 0.1fr 1fr 0.3fr 1fr 0.1fr;
+    gap: 3%;
+    align-items: center;
+}
+/*Especificidad (0,0,1)*/
+h2 {
+    grid-column: 1 / -1;
+    text-align: center;
+}
+/*Especificidad (0,0,1)*/
+p {
+    grid-column: 1 / -1;
+}
+/*Especificidad (0,0,1)*/
+button{
+    width:100%;
+}
+/*Especificidad (0,0,2)*/
+main div {
+    color: #000000;
+    background-color: #000A;
+    border: 0.2em solid #000000;
+    aspect-ratio: 1;
+    width: 98%;
+    height: 100%;
+    border-radius: 50%;
+}
+/*Especificidad (0,1,1)*/
+button:first-of-type {
+    grid-column: 2 / span 1;
+}
+/*Especificidad (0,1,1)*/
+button:nth-of-type(2) {
+    grid-column: 3 / span 1;
+}
+/*Especificidad (0,2,2)*/
+main.load div:first-of-type {
+    animation: 0.5s lightSemaphore 0s forwards;
+}
+/*Especificidad (0,2,2)*/
+main.load div:nth-of-type(2) {
+    animation: 0.5s lightSemaphore 0.5s forwards;
+}
+/*Especificidad (0,2,2)*/
+main.load div:nth-of-type(3) {
+    animation: 0.5s lightSemaphore 1s forwards;
+}
+/*Especificidad (0,2,2)*/
+main.load div:nth-of-type(4) {
+    animation: 0.5s lightSemaphore 1.5s forwards;
+}
+/*Especificidad (0,0,2)*/
+main form,main ol{
+    grid-column: 2/4;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+/*Especificidad (0,0,2)*/
+ol li{
+    width:100%;
+}
+/*Especificidad (0,1,1)*/
+input[type='text']{
+    flex-grow: 1;
+}
+/*Especificidad (0,1,1)*/
+input[type='submit']{
+    width: 100%;
+}
+/*Especificidad (0,0,1)*/
+label{
+    width:50%;
+}
+/*Especificidad (0,2,2)*/
+main.load.unload div{
+    animation: 0.1s out 0s forwards;
+}
+@keyframes lightSemaphore {
+    from{
+        background-color: #000000;
+    }
+    to{
+        background-color: #FF0000;
+    }
+}
+@keyframes out {
+    from{
+        /*Redefinicion  causada por animación*/
+        /*Color de texto no puesto por no poner texto en dichos divs*/
+        background-color: #FF0000;
+    }
+    to{
+        /*Redefinicion  causada por animación*/
+        /*Color de texto no puesto por no poner texto en dichos divs*/
+        background-color: #000000;
+    }
+}

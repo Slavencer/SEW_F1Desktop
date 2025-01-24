@@ -1,0 +1,40 @@
+/*Especificidad (0,0,1)*/
+main{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+/*Especificidad (0,0,1)*/
+label,input,textarea{
+    width:96%;
+    margin:0.1em 2%;
+}
+textarea{
+    min-height: 3em;
+}
+main article img{
+    width: 10em;
+}
+/*Especificidad (0,0,2)*/
+main article{
+    flex-grow: 1;
+    width: 20%;
+    border: 0.3rem solid #675345;
+    margin: 0.5%;
+    border-radius: 10%;
+    /*Color de texto está heredado de body en estilo.css, el contraste cumple el estándar*/
+    background-color: #FFEEAD;
+    text-align: center;
+}
+@media screen and (max-width: 810px){
+    /*Especificidad (0,0,1)*/
+    main{
+        /*Redefinición causada por media query*/
+        flex-direction: column;
+    }
+    /*Especificidad (0,0,2)*/
+    main article{
+        /*Redefinición causada por media query*/
+        width: 98%;
+    }
+}
