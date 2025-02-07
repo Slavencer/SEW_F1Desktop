@@ -19,10 +19,10 @@ Bear this in mind as there may lack context and some exercises were designed sim
 The original api keys used were removed for obvious reason, switched for placeholders.
 ## How to install
 Bear in bind that these instructions explain how to install and launch the project locally.
-First, install Xampp from the official web page, preferably on C:\xampp. Clone the repository into the htdocs folder, and launch both the apache and MySql. At this point, the basic functionality of the page will be available from http://localhost/F1Desktop.
-Substitute the placeholder apis for your own or else some funcitonality will be limited. 
-Enter the mysql configuration pressing the "admin" button on xampp, and create the tables needed using the two .sql files located on F1Desktop/php, although the records.sql file only specifies the table to be created on a database called "records" that you must create on your own.
-Lastly, create a user called "DBUSER2024" with the password "DBPSWD2024", both without quotes, and give him all permissions. 
+1. First, install Xampp from the official web page, preferably on C:\xampp. Clone the repository into the htdocs folder, and launch both the apache and MySql. At this point, the basic functionality of the page will be available from http://localhost/F1Desktop.
+2. Substitute the placeholder apis for your own or else some funcitonality will be limited. 
+3. Enter the mysql configuration pressing the "admin" button on xampp, and create the tables needed using the two .sql files located on F1Desktop/php, although the records.sql file only specifies the table to be created on a database called "records" that you must create on your own.
+4. Lastly, create a user called "DBUSER2024" with the password "DBPSWD2024", both without quotes, and give him all permissions. 
 Now it should work correctly.
 ## Disclaimer
 This project was carried out while learning web design and standards, so it shows the inexperience I had in these technologies. 
