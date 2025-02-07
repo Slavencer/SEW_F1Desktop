@@ -39,7 +39,7 @@ class Moneda{
         $this->monedaDestino=$monedaDestino;
     }
     public function getExchangeInfo(){
-        $url = "https://openexchangerates.org/api/latest.json?app_id=1667fb91b5c8467091c95908425a3e5c&symbols=".$this->monedaLocal.",".$this->monedaDestino;
+        $url = "https://openexchangerates.org/api/latest.json?app_id=exampleKeyId&symbols=".$this->monedaLocal.",".$this->monedaDestino;
         $headers = [
             "Accept: application/json",
         ];
